@@ -299,10 +299,3 @@ pip install --upgrade 'sqlalchemy>=2.0.36' greenlet
 
 Install Docker Desktop from https://www.docker.com/products/docker-desktop/
 
-## License
-
-[Add your license here]
-
-## Contributing
-
-[Add contribution guidelines here]
