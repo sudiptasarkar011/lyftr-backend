@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET:-your_webhook_secret_here}
+      - DATABASE_URL=sqlite+aiosqlite:///./data/app.db
+      - LOG_LEVEL=INFO
+    env_file:
+      - .env
+    restart: unless-stopped
